@@ -1,0 +1,70 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.outer-container {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.inner-container {
+  display: flex;
+  width: 100vw;
+  flex-grow: 1;
+}
+
+.sidebar {
+  ul {
+    list-style: none;
+  }
+  width: 72px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 4px;
+  .icon:hover {
+    background-color: #f2f2f2 !important;
+  }
+  position: fixed;
+  top: 56px;
+}
+
+.header {
+  display: flex;
+  height: 56px;
+  padding: 0 16px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  position: fixed;
+}
+
+.home {
+  padding: 20px;
+  flex-grow: 1;
+  margin-top: 56px;
+  margin-left: 72px;
+  h1,
+  p {
+    margin-left: 20px;
+  }
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon:hover {
+  background-color: #e5e5e5 !important;
+}
+
+input:focus {
+  border: 1px solid rgb(42, 42, 137) !important;
+  box-shadow: 0px 0px 1px 1px #ccc;
+}
