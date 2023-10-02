@@ -19,18 +19,22 @@ const Header = () => {
         <div className="flex-center" style={{ marginLeft: '8px' }}>
           <RxHamburgerMenu size="1.5em" />
         </div>
-        <div
-          className="flex-center"
-          style={{
-            marginLeft: '1em',
-          }}
-        >
-          <FaYoutube size="30px" color="red" />
-        </div>
-        <p style={{ display: 'block', fontWeight: 'bolder', fontSize: '20px' }}>
-          Premium
-        </p>
-        <sup style={{ fontSize: '0.5em' }}>IN</sup>
+        <a href="https://www.youtube.com/" className="flex-center">
+          <div
+            className="flex-center"
+            style={{
+              marginLeft: '1em',
+            }}
+          >
+            <FaYoutube size="30px" color="red" />
+          </div>
+          <p
+            style={{ display: 'block', fontWeight: 'bolder', fontSize: '20px' }}
+          >
+            Premium
+          </p>
+          <sup style={{ fontSize: '0.5em' }}>IN</sup>
+        </a>
       </div>
       <div style={{ display: 'flex', flex: '0 1 732px', minWidth: 0 }}>
         <div
