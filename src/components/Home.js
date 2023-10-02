@@ -17,7 +17,6 @@ const Home = () => {
         }
       )
       .then((res) => {
-        console.log(res.data.items)
         setFeedData(res.data.items)
       })
   }, [])
@@ -27,8 +26,10 @@ const Home = () => {
         <VideoCard
           key={item.id.videoId}
           data={{
+            id: item.id.videoId,
             title: item.snippet.title,
             channelTitle: item.snippet.channelTitle,
+            channelId: item.snippet.channelId,
             thumbnail: item.snippet.thumbnails.high.url,
             publishedAt: item.snippet.publishedAt,
           }}

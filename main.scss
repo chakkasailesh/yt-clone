@@ -89,14 +89,25 @@ a {
 
 .details {
   height: 100px;
-  background-color: pink;
+  display: flex;
+}
+
+.link {
+  width: 100%;
+  height: 100%;
+}
+
+.info {
+  position: relative;
   h3 {
-    overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    width: 100%;
+    margin: 12px 0 4px 0;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
-  overflow: hidden;
-  border-radius: 0 0 10px 10px;
 }
 
 @media (max-width: 1081px) {
