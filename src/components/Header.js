@@ -1,45 +1,20 @@
-import React from 'react'
-import { RxHamburgerMenu } from 'react-icons/rx'
-import { FaYoutube } from 'react-icons/fa'
+import React, { useState } from 'react'
 import { CgProfile } from 'react-icons/cg'
 import { IoMdNotificationsOutline } from 'react-icons/io'
 import { BiVideoPlus } from 'react-icons/bi'
 import { MdMic } from 'react-icons/md'
 import { AiOutlineSearch } from 'react-icons/ai'
+import HamMenu from './HamMenu'
+import CreatorCard from './CreatorCard'
 
 const Header = ({ toggleDrawer }) => {
+  const [isCreateClicked, setIsCreateClicked] = useState(false)
+  const toggleCreateClick = () => {
+    setIsCreateClicked((prev) => !prev)
+  }
   return (
     <div className="header">
-      <div
-        className="flex-center"
-        style={{
-          height: '40px',
-        }}
-      >
-        <div
-          className="flex-center"
-          style={{ marginLeft: '8px', cursor: 'pointer' }}
-          onClick={() => toggleDrawer()}
-        >
-          <RxHamburgerMenu size="1.5em" />
-        </div>
-        <a href="https://www.youtube.com/" className="flex-center">
-          <div
-            className="flex-center"
-            style={{
-              marginLeft: '1em',
-            }}
-          >
-            <FaYoutube size="30px" color="red" />
-          </div>
-          <p
-            style={{ display: 'block', fontWeight: 'bolder', fontSize: '20px' }}
-          >
-            Premium
-          </p>
-          <sup style={{ fontSize: '0.5em' }}>IN</sup>
-        </a>
-      </div>
+      <HamMenu toggleDrawer={toggleDrawer} />
       <div style={{ display: 'flex', flex: '0 1 732px', minWidth: 0 }}>
         <div
           style={{
@@ -103,9 +78,11 @@ const Header = ({ toggleDrawer }) => {
             width: '40px',
             borderRadius: '20px',
           }}
+          onClick={() => toggleCreateClick()}
         >
           <BiVideoPlus size="1.5em" />
         </div>
+        <CreatorCard isVisible={isCreateClicked} />
         <div
           className="flex-center icon"
           style={{

@@ -52,6 +52,21 @@ html {
   flex-direction: column;
 }
 
+.creator-card {
+  position: absolute;
+  top: 50px;
+  width: 176px;
+  height: 80px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+}
+
+.hidden {
+  display: none;
+}
+
 .inner-container {
   display: flex;
   width: 100vw;

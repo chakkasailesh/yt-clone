@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Header, Home, SideBar } from './components'
-import { RxHamburgerMenu } from 'react-icons/rx'
-import { FaYoutube } from 'react-icons/fa'
+import HamMenu from './components/HamMenu'
 
 const App = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
@@ -19,40 +18,7 @@ const App = () => {
             marginTop: '8px',
           }}
         >
-          <div
-            className="flex-center"
-            style={{
-              height: '40px',
-            }}
-          >
-            <div
-              className="flex-center"
-              style={{ marginLeft: '8px', cursor: 'pointer' }}
-              onClick={() => toggleDrawer()}
-            >
-              <RxHamburgerMenu size="1.5em" />
-            </div>
-            <a href="https://www.youtube.com/" className="flex-center">
-              <div
-                className="flex-center"
-                style={{
-                  marginLeft: '1em',
-                }}
-              >
-                <FaYoutube size="30px" color="red" />
-              </div>
-              <p
-                style={{
-                  display: 'block',
-                  fontWeight: 'bolder',
-                  fontSize: '20px',
-                }}
-              >
-                Premium
-              </p>
-              <sup style={{ fontSize: '0.5em' }}>IN</sup>
-            </a>
-          </div>
+          <HamMenu toggleDrawer={toggleDrawer} />
         </div>
         <div className="drawer"></div>
       </div>
