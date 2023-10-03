@@ -7,7 +7,7 @@ import { BiVideoPlus } from 'react-icons/bi'
 import { MdMic } from 'react-icons/md'
 import { AiOutlineSearch } from 'react-icons/ai'
 
-const Header = () => {
+const Header = ({ toggleDrawer }) => {
   return (
     <div className="header">
       <div
@@ -16,7 +16,11 @@ const Header = () => {
           height: '40px',
         }}
       >
-        <div className="flex-center" style={{ marginLeft: '8px' }}>
+        <div
+          className="flex-center"
+          style={{ marginLeft: '8px', cursor: 'pointer' }}
+          onClick={() => toggleDrawer()}
+        >
           <RxHamburgerMenu size="1.5em" />
         </div>
         <a href="https://www.youtube.com/" className="flex-center">
