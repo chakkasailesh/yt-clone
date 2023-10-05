@@ -12,7 +12,7 @@ const HamMenu = ({ toggleDrawer }) => {
     >
       <div
         className="flex-center"
-        style={{ marginLeft: '8px', cursor: 'pointer' }}
+        style={{ padding: '0 8px 0 8px', cursor: 'pointer' }}
         onClick={() => toggleDrawer()}
       >
         <RxHamburgerMenu size="1.5em" />

@@ -6,11 +6,16 @@ import { MdMic } from 'react-icons/md'
 import { AiOutlineSearch } from 'react-icons/ai'
 import HamMenu from './HamMenu'
 import CreatorCard from './CreatorCard'
+import Notifications from './Notifications'
 
 const Header = ({ toggleDrawer }) => {
   const [isCreateClicked, setIsCreateClicked] = useState(false)
+  const [isNotificationClicked, setIsNotificationClicked] = useState(false)
   const toggleCreateClick = () => {
     setIsCreateClicked((prev) => !prev)
+  }
+  const toggleNotificationClick = () => {
+    setIsNotificationClicked((prev) => !prev)
   }
   return (
     <div className="header">
@@ -89,9 +94,11 @@ const Header = ({ toggleDrawer }) => {
             width: '40px',
             borderRadius: '20px',
           }}
+          onClick={() => toggleNotificationClick()}
         >
           <IoMdNotificationsOutline size="1.5em" />
         </div>
+        <Notifications isVisible={isNotificationClicked} />
         <div
           className="flex-center"
           style={{
